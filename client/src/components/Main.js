@@ -43,6 +43,7 @@ class Main extends Component {
         } else {
             API.NYTsearch(this.state).then(res => {
                 let articleResults = res.data.response.docs;
+                console.log(articleResults)
                 this.setState({
                     articles: articleResults
                 });

@@ -27,3 +27,24 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.article-container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+}
+
+.article-thumbnail {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .article-container {
+        flex-direction: column;
+    }
+}
