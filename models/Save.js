@@ -7,7 +7,10 @@ let saveSchema = new Schema({
     'snippet': String,
     'url': String,
     'pubDate': Date,
-    'image': String,
+    'image': {
+        'type': String,
+        default: ''
+    },
     'byline': String,
     'insertDate': {
         type: Date,

@@ -82,7 +82,6 @@ class Main extends Component {
                         handleSubmit={this.handleSubmit}
                         validation={this.state.validator} />
                 </Row>
-
                 <Row>
                     <ArticleList articles={this.state.articles} saveArticle={this.saveArticle} />
                 </Row>

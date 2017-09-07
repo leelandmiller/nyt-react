@@ -9,24 +9,30 @@ module.exports = {
     create: function(req, res) {
         console.log(req.body);
         let save = req.body.article;
+        let image = '';
+
+        if (save.multimedia.length > 0) {
+            image = save.multimedia[1].url;
+        }
 
         Save.create({
-            'headline': save.headline,
+            'headline': save.headline.main,
             'snippet': save.snippet,
             'url': save.web_url,
             'pubDate': save.pub_date,
-            'image': save.multimedia[0].url,
+            'image': image,
             'byline': save.byline.original,
-            // '_id': article._id
-        }, function(err, newDoc) {
-            console.log('inside promise mongoose')
+            '_id': save._id
+        }).then(newDoc => {
+            console.log(newDoc)
             res.json(newDoc);
         });
     },
     // update: function(req, res) {
     //
     // },
-    // destroy: function(req, res) {
-    //
-    // }
+    destroy: function(req, res) {
+        console.log(req.params)
+        Save.findOneAndRemove({'_id': req.params.articleId}).then(removed => res.json(removed)).catch(err => console.log(err));
+    }
 };

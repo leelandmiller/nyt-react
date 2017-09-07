@@ -29,6 +29,9 @@ const API = {
         return axios.post('/api/savedarticles', {
             article
         });
+    },
+    removeSavedArticle: function(articleId) {
+        return axios.delete(`/api/savedarticles/${articleId}`);
     }
 }
 
