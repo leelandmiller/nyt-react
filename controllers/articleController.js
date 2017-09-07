@@ -28,9 +28,6 @@ module.exports = {
             res.json(newDoc);
         });
     },
-    // update: function(req, res) {
-    //
-    // },
     destroy: function(req, res) {
         console.log(req.params)
         Save.findOneAndRemove({'_id': req.params.articleId}).then(removed => res.json(removed)).catch(err => console.log(err));

@@ -6,7 +6,6 @@ let router = new express.Router();
 
 router.get('/savedarticles', articleController.index);
 router.post('/savedarticles', articleController.create);
-// router.patch('/savedarticles/:id', articleController.update);
 router.delete('/savedarticles/:articleId', articleController.destroy);
 
 module.exports = router;

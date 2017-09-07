@@ -13,13 +13,8 @@ const ArticleList = props => (
                         <Article
                             article={article}
                             key={article._id}
-                            headline={article.headline.main}
-                            snippet={article.snippet}
-                            url={article.web_url}
-                            image={article.multimedia.length > 0 ? article.multimedia[1].url : ''}
-                            pubDate={article.pub_date}
-                            byline={article.byline}
-                            saveArticle={props.saveArticle} />
+                            saveArticle={props.saveArticle}
+                             />
                     )) }
                 </Panel>
             </Col>

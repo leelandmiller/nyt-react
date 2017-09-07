@@ -5,8 +5,8 @@ const Article = props => (
     <Row className="ml-20 mr-20">
         <Panel>
             <Col xs={11}>
-                <h4>{props.headline}</h4>
-                <p>{props.snippet}</p>
+                <h4>{props.article.headline.main}</h4>
+                <p>{props.article.snippet}</p>
             </Col>
             <Col xs={1} className="fav-ic-container">
                 <span onClick={() => props.saveArticle(props.article)} className="ion-android-favorite-outline favorite"></span>
