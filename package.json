@@ -2,7 +2,7 @@
 	"name": "nyt-react",
 	"version": "1.0.0",
 	"description": "New Yorks Times scraper. MERN STACK",
-	"main": "index.js",
+	"main": "server.js",
 	"scripts": {
 		"heroku-postbuild": "cd client && npm install && npm run build",
 		"start": "./node_modules/.bin/concurrently \"npm run server\" \"cd client && npm start\"",
