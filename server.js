@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3001;
 mongoose.Promise = global.Promise;
 let app = express();
 
-mongoose.connect('mongodb://localhost:27017/newyorktimesdb');
+mongoose.connect('mongodb://heroku_885f0zbz:3r00uu2tqa8tet94d69h9qm06f@ds127034.mlab.com:27034/heroku_885f0zbz');
 
 let db = mongoose.connection;
 
