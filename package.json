@@ -4,7 +4,7 @@
 	"description": "New Yorks Times scraper. MERN STACK",
 	"main": "index.js",
 	"scripts": {
-		"heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+		"heroku-postbuild": "cd client && npm install && npm run build",
 		"start": "concurrently \"npm run server\" \"cd client && npm start\"",
 		"server": "node server.js",
 		"client": "node start-client.js",
