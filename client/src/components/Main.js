@@ -43,7 +43,6 @@ class Main extends Component {
         } else {
             API.NYTsearch(this.state).then(res => {
                 let articleResults = res.data.response.docs;
-                console.log(articleResults)
                 this.setState({
                     articles: articleResults
                 });
@@ -65,7 +64,6 @@ class Main extends Component {
             if (res.data.status === 'error') {
                 throw new Error(res.data.message);
             }
-            console.log(res);
         });
     }
 

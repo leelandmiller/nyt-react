@@ -7,7 +7,6 @@ module.exports = {
         }).catch(err => res.json(err));
     },
     create: function(req, res) {
-        console.log(req.body);
         let save = req.body.article;
         let image = '';
 
@@ -24,12 +23,10 @@ module.exports = {
             'byline': save.byline.original,
             '_id': save._id
         }).then(newDoc => {
-            console.log(newDoc)
             res.json(newDoc);
         });
     },
     destroy: function(req, res) {
-        console.log(req.params)
         Save.findOneAndRemove({'_id': req.params.articleId}).then(removed => res.json(removed)).catch(err => console.log(err));
     }
 };
